@@ -5,7 +5,7 @@ Conway's Game of Life
 Log file contains the intial array of the game. It might be useful when you found a good pattern and want to note it somewhere. 
 
 Requirements:
-- Python 3.6 or above
+- Python 3.8 or above
 - [p5py](https://github.com/p5py/p5)
 
 References:
