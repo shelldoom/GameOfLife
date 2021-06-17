@@ -22,7 +22,7 @@ def populateRegion(arr, regions=1):
 def make2DArray(rows, cols, empty=False):
     arr = [[0]*cols for _ in range(rows)]
     if not empty:
-        arr = [random.choices([0, 1], k=cols, weights=[0.9, 0.1]) for _ in range(rows)]
+        arr = [random.choices([0, 1], k=cols, weights=[0.8, 0.2]) for _ in range(rows)]
         # arr = populateRegion(arr, 3)
     logging.debug(f'Array created with rows:{rows}, cols:{cols}, arr:{arr}')
     return arr
