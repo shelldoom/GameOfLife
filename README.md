@@ -1,5 +1,7 @@
 Conway's Game of Life
 
+![Conway's Game of Life](https://i.imgur.com/5QXtg8e.gif)
+
 Log file contains the intial array of the game. It might be useful when you found a good pattern and want to note it somewhere. 
 
 Requirements:
