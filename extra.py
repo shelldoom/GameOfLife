@@ -1,7 +1,7 @@
 import random
 from typing import Literal
 
-def spawnGlider(arr, x=None, y=None):
+def spawnGlider(arr: list[Literal[0, 1]], x: int = None, y: int = None) -> list[Literal[0, 1]]:
     """
     Spawn a glider at random position (if position is not specified)
     """
@@ -35,7 +35,7 @@ Reference for pulsar
 """
 
 
-def spawnPulsar(arr:list[Literal[0, 1]], x=None, y=None):
+def spawnPulsar(arr:list[Literal[0, 1]], x: int = None, y: int = None) -> list[Literal[0, 1]]:
     """
     Spawn a 3 period pulsar at random position (if position is not specified)
     """

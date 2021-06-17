@@ -8,7 +8,7 @@ screen_width, screen_height = 600, 600
 resolution = 20
 rows, cols = screen_height // resolution, screen_width // resolution
 
-def populateRegion(arr, regions=1):
+def populateRegion(arr: list[Literal[0, 1]], regions: int = 1):
     rows, cols = len(arr), len(arr[0])
     for _ in range(regions):
         r, c = random.randrange(1, rows), random.randrange(1, cols)
@@ -19,7 +19,7 @@ def populateRegion(arr, regions=1):
     return arr
 
 
-def make2DArray(rows, cols, empty=False):
+def make2DArray(rows: int, cols: int, empty: bool=False):
     arr = [[0]*cols for _ in range(rows)]
     if not empty:
         arr = [random.choices([0, 1], k=cols, weights=[0.8, 0.2]) for _ in range(rows)]
@@ -28,7 +28,7 @@ def make2DArray(rows, cols, empty=False):
     return arr
 
 
-def draw2DArray(arr, resolution):
+def draw2DArray(arr: list[Literal[0, 1]], resolution: int) -> None:
     rows, cols = len(arr), len(arr[0])
     offset = 0
     for i in range(rows):
@@ -41,7 +41,7 @@ def draw2DArray(arr, resolution):
                 rect(x, y, resolution - offset, resolution - offset)
 
 
-def getAliveNeighbors(arr, r, c):
+def getAliveNeighbors(arr: list[Literal[0, 1]], r: int, c: int) -> int:
     rows, cols = len(arr), len(arr[0])
     assert r < rows and c < cols
     neighborCount = 0
@@ -56,7 +56,7 @@ def getAliveNeighbors(arr, r, c):
     return neighborCount
 
 
-def newGeneration(arr):
+def newGeneration(arr: list[Literal[0, 1]]) -> list[Literal[0, 1]]:
     rows, cols = len(arr), len(arr[0])
     new_arr = [[0]*cols for _ in range(rows)]
     for i in range(rows):
