@@ -7,6 +7,7 @@ Log file contains the intial array of the game. It might be useful when you foun
 Requirements:
 - Python 3.8 or above
 - [p5py](https://github.com/p5py/p5)
+- [GLFW](https://www.glfw.org/)
 
 References:
 - https://thecodingtrain.com/CodingChallenges/085-the-game-of-life.html
