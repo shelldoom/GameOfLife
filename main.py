@@ -22,7 +22,7 @@ def populateRegion(arr: list[Literal[0, 1]], regions: int = 1):
 def make2DArray(rows: int, cols: int, empty: bool=False):
     arr = [[0]*cols for _ in range(rows)]
     if not empty:
-        arr = [random.choices([0, 1], k=cols, weights=[0.8, 0.2]) for _ in range(rows)]
+        arr = [random.choices([0, 1], k=cols, weights=[0.9, 0.1]) for _ in range(rows)]
         # arr = populateRegion(arr, 3)
     logging.debug(f'Array created with rows:{rows}, cols:{cols}, arr:{arr}')
     return arr
@@ -38,6 +38,7 @@ def draw2DArray(arr: list[Literal[0, 1]], resolution: int) -> None:
                 y = i * resolution
                 fill(0)
                 stroke(150)
+                stroke_weight(3)
                 rect(x, y, resolution - offset, resolution - offset)
 
 
@@ -91,4 +92,4 @@ def draw():
 
 
 if __name__ == "__main__":
-    run(frame_rate=10)
+    run(frame_rate=7)
